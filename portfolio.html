@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Marco's-server</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                padding: 0; margin: 0;
+                background: #1a1e24;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal>
+            
+            <span data-ty="input" data-ty-prompt="Marco's-Server login:">Marcobg</span>
+            <span data-ty="input" data-ty-prompt="Password:">*****</span>
+            <span data-ty>Sorry, try again</span>
+            <span data-ty="input" data-ty-prompt="Password:">*****</span>
+            <span data-ty>Sorry, try again</span>
+            <span data-ty="input" data-ty-prompt="Password:">*****</span>
+            <span data-ty>Showing password on next attempt</span>
+            <span data-ty="input" data-ty-prompt="Password:">MARCO</span>
+            <span data-ty>Sorry, try again</span>
+            <span data-ty="input" data-ty-prompt="Password:">marco</span>
+            <span data-ty>Succesfully logged in</span>
+            <span data-ty="input" data-ty-prompt="Marco's-Server$">alias</span>
+            <span data-ty>portfolio=https://www.github.com/marcosgithub/my-portfolio-repository.git</span>
+            <span data-ty="input" data-ty-prompt="Marco's-Server$">git clone portfolio</span>
+            <span data-ty>Cloning portfolio</span>
+            <span data-ty="progress" data-ty-progresschar="·"></span>
+            <span data-ty="input" data-ty-prompt="Marco's-Server$:">open ./porfolio/portfolio.pdf</span>
+            <span data-ty></span>
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
