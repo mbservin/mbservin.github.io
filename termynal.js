@@ -1,9 +1,32 @@
+/**
+ * termynal.js
+ * A lightweight, modern and extensible animated terminal window, using
+ * async/await.
+ *
+ * @author Ines Montani <ines@ines.io>
+ * @version 0.0.1
+ * @license MIT
+ */
 
 'use strict';
 
 /** Generate a terminal widget. */
 class Termynal {
-
+    /**
+     * Construct the widget's settings.
+     * @param {(string|Node)=} container - Query selector or container element.
+     * @param {Object=} options - Custom settings.
+     * @param {string} options.prefix - Prefix to use for data attributes.
+     * @param {number} options.startDelay - Delay before animation, in ms.
+     * @param {number} options.typeDelay - Delay between each typed character, in ms.
+     * @param {number} options.lineDelay - Delay between each line, in ms.
+     * @param {number} options.progressLength - Number of characters displayed as progress bar.
+     * @param {string} options.progressChar – Character to use for progress bar, defaults to █.
+	 * @param {number} options.progressPercent - Max percent of progress.
+     * @param {string} options.cursor – Character to use for cursor, defaults to ▋.
+     * @param {Object[]} lineData - Dynamically loaded line data objects.
+     * @param {boolean} options.noInit - Don't initialise the animation.
+     */
     constructor(container = '#termynal', options = {}) {
         this.container = (typeof container === 'string') ? document.querySelector(container) : container;
         this.pfx = `data-${options.prefix || 'ty'}`;
@@ -76,7 +99,7 @@ class Termynal {
             line.removeAttribute(`${this.pfx}-cursor`);
         }
         
-        location.replace("https://www.linkedin.com/ambry/?x-li-ambry-ep=AQExRrd7Z1RG-AAAAW_OwKywdutw4C_5m2XNkY73hoEB7VixsSlMLVHDX2ez3Bdyw55dz6tbroj9hR22eHxJ8RigdhMv-2ykgREL952EK8rUqJWn28uQZ2xvtPhAOdh4D4KFzs6UJHGzmzdEjX5Afv52EfTrtP6zQG94PWvHwQrysRbNVZIKIiXjzhzueHpJ76eN_NxkHticzTWb1zG5cQxQvqFM4oNwEgO5oYP1Os-EqyYSfpfxLFoGi87nt5oQc_UFirYhUChX3EIYCrGRgEZ_XsXhL-BC-JT6YrxIVsws9bPZK2CJWWIvUPsiu3s2ROJWVL53OCI7v-0fQwyZPEVpoQzmk7wrsQCRq2fLbQPUEr317wMOBc8klyYDaYNxjjNsoTL0Ibnk0zYHpErqGQDuZWk3p1HUQUcFhADuBDxKtS0tz7R1uURbg8wk4RTZuXYbtHXDBwq3AuW_tqmXvovS1kxrjVjz1yMRcz_15aDZ-jiT91Tu1K917fGHKfuc9DOsBSeL27xuAacaEQLZpQ&x-ambry-um-filename=Profile.pdf")
+        window.open('portfolio.pdf', '_blank', 'fullscreen=yes'); return false;
     }
 
     /**
